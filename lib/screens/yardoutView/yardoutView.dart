@@ -13,6 +13,9 @@ class yardoutView extends StatefulWidget {
 class _yardoutViewState extends State<yardoutView> {
   String dropdownvalue = "Select";
   var items = ["Select", "Item1", "Item2", "Item3", "Item4"];
+
+  String dropdownvalue1 = "Select";
+  var items1 = ["Select", "Item1", "Item2", "Item3", "Item4"];
   DateTime _dateTime = DateTime.now();
 
   @override
@@ -233,22 +236,22 @@ class _yardoutViewState extends State<yardoutView> {
                       borderRadius: BorderRadius.circular(20),
                     ),
                     child: DropdownButton(
-                      value: dropdownvalue,
+                      value: dropdownvalue1,
                       icon: const Icon(Icons.keyboard_arrow_down),
                       isExpanded: true,
                       //itemHeight: 20.0,
                       iconSize: 30,
                       style:
                           const TextStyle(color: Colors.purple, fontSize: 22),
-                      items: items.map((String items) {
+                      items: items.map((String items1) {
                         return DropdownMenuItem(
-                          value: items,
-                          child: Text(items),
+                          value: items1,
+                          child: Text(items1),
                         );
                       }).toList(),
                       onChanged: (String? newValue) {
                         setState(() {
-                          dropdownvalue = newValue!;
+                          dropdownvalue1 = newValue!; //dropdownvalue1
                         });
                       },
                     ),
